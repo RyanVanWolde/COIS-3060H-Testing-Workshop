@@ -139,7 +139,9 @@ describe('Generate button — success message (Issue #2)', () => {
     // in a random order every time. So this test is flaky — it passes
     // sometimes and fails other times with no code changes.
     // Fix it so the test passes reliably regardless of item order.
-    expect(msg).toEqual(expect.arrayContaining(['starter-bread', 'main-pizza', 'dessert-brownie']));
+    expect(msg).toContain('starter-bread');
+    expect(msg).toContain('main-pizza');
+    expect(msg).toContain('dessert-brownie');
   });
 
 });
